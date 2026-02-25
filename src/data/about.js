@@ -13,8 +13,10 @@ export const pillars = [
     title: "Ubiquity",
     subtitle: "of African Cultures",
     description:
-  "African-based oral traditions traveled across the colonized world and evolved with extraordinary resilience, shaping what is now arguably the dominant cultural force in Western entertainment media. They remain among humanity’s most powerful technologies for communication, memory, and transformative change."
-  },
+        "African-based oral traditions traveled across the colonized world and evolved with extraordinary resilience, shaping what is now arguably the dominant cultural force in Western entertainment media. They remain among humanity’s most powerful technologies for communication, memory, and transformative change.",
+    accentColor: "aerials",
+    imageUrl: "/images/pillars/ubiquity.jpg",
+},
   {
     id: "history-humanizes",
     title: "History",

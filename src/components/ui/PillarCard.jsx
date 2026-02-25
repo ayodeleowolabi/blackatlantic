@@ -1,61 +1,83 @@
 import { motion } from "framer-motion"
 
-const imageAnim = {
-  rest: { scale: 1, opacity: 0.35 },
-  hover: { scale: 1.03, opacity: 0.95 },
+const borderByAccent = {
+  sahel: "border-sahel",
+  aerials: "border-aerials",
+  afrocidade: "border-afrocidade",
 }
 
-const veilAnim = {
-  rest: { opacity: 0.75 },
-  hover: { opacity: 0.15 },
+const titleByAccent = {
+  sahel: "text-sahel",
+  aerials: "text-aerials",
+  afrocidade: "text-afrocidade",
 }
 
 export default function PillarCard({
   title,
   subtitle,
   description,
-  image,
-  accentBorder,
-  accentText,
+  imageUrl,
+  accentColor = "sahel",
 }) {
   return (
-    <motion.article
-      initial="rest"
-      whileHover="hover"
-      animate="rest"
-      className={`group relative overflow-hidden rounded-2xl border bg-surface min-h-[540px] ${accentBorder}`}
+    <article
+      className={[
+        "bg-surface overflow-hidden",
+        "border-2 rounded-none", // rectangle borders
+        borderByAccent[accentColor],
+      ].join(" ")}
     >
-      {/* Background Image */}
-      <motion.img
-        variants={imageAnim}
-        src={image}
-        alt={title}
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-
-      {/* Dark veil */}
-      <motion.div
-        variants={veilAnim}
-        className="absolute inset-0 bg-black"
-      />
-
-      {/* Gradient for readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-black/80" />
-
-      {/* Content */}
-      <div className="relative flex flex-col justify-end h-full p-8">
-        <div className="mb-3 text-xs tracking-[0.28em] uppercase text-muted">
-          {subtitle}
-        </div>
-
-        <h3 className={`text-2xl font-semibold ${accentText}`}>
+      {/* Title + subtitle ALWAYS visible */}
+      <header className="p-6 pb-4">
+        <h3
+          className={[
+            "font-display text-3xl md:text-4xl leading-tight",
+            titleByAccent[accentColor],
+          ].join(" ")}
+        >
           {title}
         </h3>
 
-        <p className="mt-4 text-sm leading-relaxed text-primary/80">
+        <p className="font-body mt-2 text-xs tracking-[0.35em] uppercase text-muted">
+          {subtitle}
+        </p>
+      </header>
+
+      {/* Image area (hover affects only image/veil) */}
+      <motion.div
+        initial="rest"
+        animate="rest"
+        whileHover="hover"
+        className="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden"
+      >
+        <motion.img
+          variants={{
+            rest: { scale: 1, opacity: 0.95 },
+            hover: { scale: 1.03, opacity: 1 },
+          }}
+          src={imageUrl}
+          alt={title}
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        />
+
+        <motion.div
+          variants={{
+            rest: { opacity: 0.35 },
+            hover: { opacity: 0.12 },
+          }}
+          className="absolute inset-0 bg-black"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/10 to-black/35" />
+      </motion.div>
+
+      {/* Description */}
+      <div className="p-6">
+        <p className="font-body text-sm leading-relaxed text-primary/80">
           {description}
         </p>
       </div>
-    </motion.article>
+    </article>
   )
 }

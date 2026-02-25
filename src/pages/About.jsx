@@ -24,7 +24,7 @@ function About() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="font-display text-6xl md:text-7xl text-primary leading-tight mb-6"
         >
-          Pillars Black Atlantic
+          Pillars of Black Atlantic
         </motion.h1>
 
         <motion.p

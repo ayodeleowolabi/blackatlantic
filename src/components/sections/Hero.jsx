@@ -1,14 +1,36 @@
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion"
+
+<motion.div
+  className="absolute inset-0 pointer-events-none bg-black"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: [0, 0.05, 0] }}
+  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+/>
 
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen bg-base flex items-center justify-center overflow-hidden">
-      
-      <div className="absolute inset-0 bg-gradient-to-b from-base via-base to-surface opacity-90" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-base">
 
+      {/* 🎥 Background Video */}
+<video
+  className="absolute inset-0 w-full h-full object-cover"
+  src="/videos/hero.mp4"
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="auto"
+  poster="/images/hero-poster.jpg"
+/>
+<div className="absolute inset-0 pointer-events-none bg-black/10" />
+
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
+
+      {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -33,7 +55,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="font-body text-muted text-lg md:text-xl max-w-2xl mx-auto mb-10"
         >
-          A futurist cultural education and entertainment organization 
+          A futurist cultural education and entertainment organization
           focused on the history and evolution of the African Diaspora.
         </motion.p>
 
