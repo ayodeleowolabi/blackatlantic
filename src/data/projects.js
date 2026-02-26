@@ -14,7 +14,7 @@ export const projects = [
     title: 'Atlantic Aerials',
     description: 'Professional drone videography and aerial photography. Atlantic Aerials captures the world from above — events, real estate, landscapes, and creative productions with cinematic precision.',
     accentColor: 'aerials',
-    videoUrl: 'https://www.youtube.com/embed/YOUR_AERIALS_VIDEO_ID',
+    videoUrl: 'https://www.youtube.com/embed/K-HwpwM3CEk',
     buttonLabel: 'Visit Atlantic Aerials',
     buttonLink: 'https://www.atlanticaerials.com',
     isExternal: true,

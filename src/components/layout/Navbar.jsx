@@ -12,14 +12,18 @@ const navLinks = [
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
-  return (
+ return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-base/80 backdrop-blur-sm border-b border-white/10">
 
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="w-full px-6 py-4 flex items-center justify-between">
 
         {/* Logo */}
-        <Link to="/" className="font-display text-xl text-primary tracking-widest uppercase">
-          Black Atlantic
+        <Link to="/" className="flex items-center">
+          <img
+            src="/images/logoyellow.png"
+            alt="Black Atlantic"
+            className="h-12 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Links */}
