@@ -16,7 +16,7 @@ export const projects = [
     accentColor: 'aerials',
     videoUrl: 'https://www.youtube.com/embed/kTbyjluN58c',
     buttonLabel: 'Visit Atlantic Aerials',
-    buttonLink: 'https://www.atlanticaerials.com',
+    buttonLink: 'https://atlanticaerial.com/',
     isExternal: true,
   },
   {
