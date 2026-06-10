@@ -26,7 +26,7 @@ function Afrocidade() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.4 }}
-        src="https://cdn.prod.website-files.com/604788cee1d4433eb9ef4d73/66cbe360a16cc5da67470593_Afrocidade%20Poster_Final_test%20optimized2-min.png"
+        src="/images/afrocidade-img.png"
         alt="Afrocidade Poster"
         className="w-full max-w-xl mx-auto block mb-16 rounded-sm"
       />
