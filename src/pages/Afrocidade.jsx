@@ -13,14 +13,7 @@ function Afrocidade() {
         Culture · Music · History
       </motion.p>
 
-      <motion.h1
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="font-display text-6xl md:text-7xl text-primary leading-tight mb-12 text-center"
-      >
-        Afrocidade
-      </motion.h1>
+     
 
       <motion.img
         initial={{ opacity: 0 }}
