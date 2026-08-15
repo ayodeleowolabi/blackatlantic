@@ -24,7 +24,7 @@ export const projects = [
     title: 'Afrocidade',
     description: 'A musical performance exploring the shared culture and history between Washington DC and Salvador Bahia. Inspired by the work of Dr. Lorenzo Turner, Afrocidade journeys through time uncovering the link between these two cities through song and dance.',
     accentColor: 'afrocidade',
-    videoUrl: 'https://www.youtube.com/embed/h3squyhEhhs',
+    videoUrl: 'https://www.youtube.com/embed/f1WjVcFCk5c',
     buttonLabel: 'Learn More',
     buttonLink: '/afrocidade',
     isExternal: false,
