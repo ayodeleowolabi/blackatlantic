@@ -34,7 +34,7 @@ export const projects = [
     title: 'Clave: Roots of African American Culture',
     description: 'A professional and community development workshop empowering musicians of all backgrounds by highlighting the foundational rhythmic tool that shapes the vast majority of musical genres today. Preserving and amplifying the shared cultural history of the African diaspora.',
     accentColor: 'clave',
-    videoUrl: 'https://www.youtube.com/embed/8KthziQlPj0',
+    videoUrl: 'https://www.youtube.com/embed/f1WjVcFCk5c',
     buttonLabel: 'Learn More',
     buttonLink: '/clave',
     isExternal: false,
