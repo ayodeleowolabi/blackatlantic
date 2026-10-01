@@ -1,16 +1,45 @@
-# React + Vite
+# blkatlantic.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live site:** [blkatlantic.com](https://blkatlantic.com)
 
-Currently, two official plugins are available:
+A creative-brand site for bandleader Jean-Francis Varre. It brings together his projects, which explore the music and history of the African diaspora: the band **Sahel**, **Atlantic Aerial** (drone videography), the **Afrocidade** performance (connecting Washington DC and Salvador, Bahia), and the **Clave** workshop series.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- **Project cards** with embedded YouTube video. Some link out to sister sites (Sahel, Atlantic Aerial) and others to internal pages.
+- **Afrocidade page** with its own landing content (also the current home route).
+- **"Pillars" about section**: Oral Cultures, the Ubiquity of African Cultures, and History Humanizes. It's driven by `data/about.js`.
+- Each project has its own accent color, defined as Tailwind theme tokens.
+- **Contact page** and a responsive navbar.
+- Page transitions and animation with Framer Motion.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech stack
 
-## Expanding the ESLint configuration
+| Layer | Tools |
+|---|---|
+| Framework | React 19, Vite 7 |
+| Routing | React Router |
+| Styling | Tailwind CSS 3 (custom theme colors) |
+| Motion | Framer Motion |
+| Hosting | Netlify (SPA redirects via `public/_redirects`) |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project structure
+
+```
+src/
+  pages/                    Afrocidade, About, Projects, Contact, Clave
+  components/layout/        Navbar
+  components/sections/      Hero
+  components/ui/            ProjectCard, PillarCard
+  data/                     projects.js, about.js (content lives here)
+```
+
+## Running locally
+
+```bash
+npm install
+npm run dev
+```
+
+---
+Designed and developed by **Ayodele Owolabi**, [AO Studio](https://github.com/ayodeleowolabi).
